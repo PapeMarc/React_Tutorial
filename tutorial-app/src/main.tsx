@@ -12,3 +12,9 @@ reactRoot.render(
     <App /> {/* Hier wird die App-Komponente (App.tsc) dem Renderer übergeben*/}
   </React.StrictMode>,
 )
+
+/*
+var c = 0;    var wird bei Start der Anwendung deklariert und ist global (also über Klarmmergrenzen hinweg) bekannt.
+let c = 0;    let wird erst an der eigentlichen Stelle im Code bekannt, an der es auch lokal deklariert wird. Klammergrenzen werden berücksichtigt.
+const c = 0;  Initialisierung und Deklaration geschehen gleichzeitig. Nach Initialisierung ist der gespeicherte Wert Unveränderbar. Klammergrenzen werden Berücksichtigt.
+*/
