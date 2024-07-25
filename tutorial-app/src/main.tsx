@@ -1,7 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.tsx';
+import './index.css';
+
+import * as objMod1 from './mod1.ts';
+//import {doIt, doIt2} from './mod1.ts'; // Importiert die exportierte Funktion doIt aus mod1.ts
+//import {doIt as doItNow, doIt2 as doItNow2} from './mod1.ts'; // geht auch, falls Methoden in diesem Kontext schon vorhanden sind.
+import makeItNow from './mod1.ts'; // diese Schreibweise ist erlaubt durch "export default"
 
 /*Erstellt ein React-Wurzelobjekt*/
 const reactRoot = ReactDOM.createRoot(document.getElementById('root')!);
@@ -12,6 +17,12 @@ reactRoot.render(
     <App /> {/* Hier wird die App-Komponente (App.tsc) dem Renderer übergeben*/}
   </React.StrictMode>,
 )
+
+//doIt(); //Verwendung einer importierten Funktion
+objMod1.doIt(); // Verwendung einer Funktion einer Sammlung aller exportierten Inhalte aus mod1 als Instanz.
+objMod1.doIt2();
+
+makeItNow(); // entspricht der Methode makeIt aus mod1, da dies der Standardexport für mod1 ist.
 
 // Let, Var und Const
 /*
