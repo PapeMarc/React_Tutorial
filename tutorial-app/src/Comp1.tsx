@@ -17,7 +17,6 @@ export default function Comp1(){
                     alert("It clicked me!");
                 }}>Click me!</button>
             </div>
-            {/* <App></App> */}
         </div>
     );
 };
