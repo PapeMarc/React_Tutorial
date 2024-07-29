@@ -2,14 +2,20 @@
 //import viteLogo from '/vite.svg'
 
 import CountButton from "./CountButton";
-
+import { useState } from 'react';
 import './App.css'
 
 // Diese Funktion rendert die Komponente App.
 function App() {
+  const[increment, setIncrement] = useState(1); // useState darf nicht undefined sein.
+
   return <div className="App">
-    <CountButton initialValue={0} increment={1}></CountButton>
-    <CountButton initialValue={-2} increment={2}></CountButton>
+    <input title="inputField" type="number" value={increment} onChange={
+      (event) => {
+          setIncrement(parseInt(event.target.value,10));
+        }}>
+    </input>
+    <CountButton initialValue={0} increment={increment}></CountButton>
   </div>;
 }
 
