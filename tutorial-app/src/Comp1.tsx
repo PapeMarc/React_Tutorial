@@ -1,4 +1,4 @@
-import App from "./App";
+//import App from "./App";
 
 export default function Comp1(){
     const msg = "Some Message.";
