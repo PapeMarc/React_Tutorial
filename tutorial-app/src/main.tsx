@@ -18,6 +18,11 @@ reactRoot.render(
   </React.StrictMode>,
 )
 
+//reactRoot.render(<div><div>Hello World!</div></div>)
+//reactRoot.render(React.createElement("div", null, React.createElement("div", null, "Hello World!")))
+//reactRoot.render(React.createElement(App, null, null))
+
+
 //doIt(); //Verwendung einer importierten Funktion
 objMod1.doIt(); // Verwendung einer Funktion einer Sammlung aller exportierten Inhalte aus mod1 als Instanz.
 objMod1.doIt2();
